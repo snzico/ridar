@@ -1,5 +1,5 @@
 package com.example.ridar;
-
+// DELETE AFTER COMMIT TEST
 /*
 fragment 01.01:
         Login
