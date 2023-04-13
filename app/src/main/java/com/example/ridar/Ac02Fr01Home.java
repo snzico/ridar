@@ -8,41 +8,44 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Ac02Fr01Home#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class Ac02Fr01Home extends Fragment {
+/*
+fragment 02.01:
+Home
+    ? Menu [AppBar, NavigationDrawer] ? - Consider
+    ^ https://stackoverflow.com/questions/5126972/nested-activities-android ^
+    *AppBar [TopAppBar]
+    ^ https://m2.material.io/components/app-bars-top/android ^
+    ^ https://developer.android.com/guide/navigation/navigation-ui?gclid=CjwKCAjwitShBhA6EiwAq3RqA7B61U6Mae4Nodm4OnDOpJbBnRtzpqYGgx5XHM780LxJtwxJkT3YZBoCRmAQAvD_BwE&gclsrc=aw.ds ^
+    *NavigationDrawer [MainNavigationDrawer]
+    ^ https://m2.material.io/components/navigation-drawer ^
+    ^ https://itnext.io/app-bar-and-navigation-drawer-in-jetpack-compose-dc799417e459 ^
+    Fragment [Ac02Fr02Search, Ac02Fr03CreateSubmission, Ac02Fr04SubmissionHistory]
+    *Consider making nested activity or additional fragment*
+*/
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+public class Ac02Fr01Home extends Fragment {
+    /*
+    default params passed to fragment
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    */
 
     public Ac02Fr01Home() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Ac02Fr01Home.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Ac02Fr01Home newInstance(String param1, String param2) {
         Ac02Fr01Home fragment = new Ac02Fr01Home();
+        /*
+        args from parameters passed in class definition
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
+        */
         return fragment;
     }
 
@@ -50,8 +53,10 @@ public class Ac02Fr01Home extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
+            /*
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            */
         }
     }
 

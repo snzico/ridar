@@ -30,12 +30,14 @@ public class Ac01Fr05ResetPassword extends Fragment {
     private String mParam1;
     private String mParam2;
     */
+
     TextView ResetPasswordTextView;
     EditText NewPasswordEditText, ConfirmNewPasswordEditText;
     Button ConfirmNewPasswordButton, BackButton;
     public Ac01Fr05ResetPassword() {
         // Required empty public constructor
     }
+
     public static Ac01Fr05ResetPassword newInstance(String param1, String param2) {
         Ac01Fr05ResetPassword fragment = new Ac01Fr05ResetPassword();
         /*

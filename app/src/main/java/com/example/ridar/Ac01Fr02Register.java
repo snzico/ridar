@@ -37,6 +37,7 @@ public class Ac01Fr02Register extends Fragment {
     private String mParam1;
     private String mParam2;
     */
+
     Boolean TSAAcceptedBoolean;
     TextView RegisterTextView;
     EditText FirstNameEditText, LastNameEditText, EmailAddressEditText, PhoneNumberEditText, PasswordEditText, ConfirmPasswordEditText;

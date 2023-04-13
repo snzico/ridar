@@ -31,9 +31,11 @@ public class Ac01Fr03ForgotPassword extends Fragment {
     private String mParam1;
     private String mParam2;
     */
+
     TextView ForgotPasswordTextView;
     EditText IdentifierEditText;
     Button ResetPasswordButton, SignInButton;
+
     public Ac01Fr03ForgotPassword() {
         // Required empty public constructor
     }

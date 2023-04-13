@@ -31,9 +31,11 @@ public class Ac01Fr04VerificationCode extends Fragment {
     private String mParam1;
     private String mParam2;
     */
+
     TextView VerificationCodeTextView;
     EditText VerificationCodeEditText;
     Button VerifyCodeButton, BackButton;
+
     public Ac01Fr04VerificationCode() {
         // Required empty public constructor
     }
