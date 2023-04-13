@@ -2,11 +2,15 @@ package com.example.ridar;
 
 import android.os.Bundle;
 
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.navigation.NavigationView;
 
 /*
 fragment 02.01:
@@ -32,6 +36,7 @@ public class Ac02Fr01Home extends Fragment {
     private String mParam1;
     private String mParam2;
     */
+    MaterialToolbar MenuMaterialToolbar;
 
     public Ac02Fr01Home() {
         // Required empty public constructor
@@ -52,6 +57,7 @@ public class Ac02Fr01Home extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             /*
             mParam1 = getArguments().getString(ARG_PARAM1);

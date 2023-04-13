@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/search_fragment"
+            android:title="Search" />
+        <item
+            android:id="@+id/submit_fragment"
+            android:title="Submit" />
+        <item
+            android:id="@+id/history_fragment"
+            android:title="History" />
+        <item
+            android:id="@+id/share_app_fragment"
+            android:title="Share" />
+        <item
+            android:id="@+id/donate_fragment"
+            android:title="Donate" />
+        <item
+            android:id="@+id/faq_fragment"
+            android:title="FAQ" />
+        <item
+            android:id="@+id/contact_fragment"
+            android:title="Contact" />
+    </group>
+</menu>

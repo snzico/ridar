@@ -89,15 +89,72 @@ CheckBox [ContestReviewCheckBox]
 Button [SubmitButton (to Ac01Fr01Home)]
  */
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toolbar;
+
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
+    private MaterialToolbar mainToolbar;
+    private DrawerLayout navigationDrawer;
+    private NavigationView navigationView;
+    private ActionBarDrawerToggle navigationToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mainToolbar = findViewById(R.id.main_toolbar);
+        setSupportActionBar(mainToolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        navigationDrawer = findViewById(R.id.navigation_drawer_layout);
+        navigationView = findViewById(R.id.navigation_view);
+
+        setDrawerContent(navigationView);
+    }
+
+    private void setDrawerContent (NavigationView view) {
+        view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected (MenuItem item) {
+                selectDrawerItem(item);
+                return true;
+            }
+        });
+    }
+
+    public void selectDrawerItem (MenuItem item) {
+        Fragment currentFragment = null;
+        Class fragmentClass;
+        /*
+        TODO
+        implement switch case for each menuitem item id
+        navigate to the selected fragment
+         */
+        switch (item.getItemId()) {
+            case R.id.search_fragment:
+                break;
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                navigationDrawer.openDrawer(GravityCompat.START);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
