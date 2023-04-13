@@ -72,8 +72,9 @@ public class Ac01Fr01Login extends Fragment {
         LoginButton = getView().findViewById(R.id.LoginButton);
         RegisterButton = getView().findViewById(R.id.RegisterButton);
         ForgotPasswordButton = getView().findViewById(R.id.ForgotPasswordButton);
-
-        /* for IdentifierEditText:
+        /*
+        component methods
+        for IdentifierEditText:
                 - check if first character is digit or not
                 - if digit assign inputType to phone number:
                     - if a non-digit is entered throw exception
@@ -96,13 +97,13 @@ public class Ac01Fr01Login extends Fragment {
         });
         PasswordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
         PasswordEditText.addTextChangedListener(new TextWatcher() {
+            public void beforeTextChanged (CharSequence sequence, int initial, int count, int after) {}
+            public void onTextChanged (CharSequence sequence, int initial, int count, int after) {}
             public void afterTextChanged (Editable sequence) {
                 if (PasswordEditText.getText().toString().isEmpty()) {
                     // Prompt user to enter password
                 }
             }
-            public void beforeTextChanged (CharSequence sequence, int initial, int count, int after) {}
-            public void onTextChanged (CharSequence sequence, int initial, int count, int after) {}
         });
         LoginButton.setOnClickListener((view) -> {
                 // Check that both EditText have appropriate user input
