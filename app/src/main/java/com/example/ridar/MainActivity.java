@@ -139,11 +139,7 @@ public class MainActivity extends AppCompatActivity {
         Fragment currentFragment = null;
         FragmentManager fragmentManager = getSupportFragmentManager();
         Class fragmentClass;
-        /*
-        TODO
-        implement switch case for each menuitem item id
-        navigate to the selected fragment
-         */
+
         switch (item.getItemId()) {
             case R.id.submit_fragment:
                 fragmentClass = Ac02Fr03CreateSubmission.class;
@@ -166,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
             default:
                 fragmentClass = Ac02Fr02Search.class;
         }
+        navigationDrawer.closeDrawer(GravityCompat.START);
 
         try {
             currentFragment = (Fragment) fragmentClass.newInstance();

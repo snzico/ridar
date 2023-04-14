@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="192dp"
-    android:padding="10dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:layout_height="112dp"
+    android:background="#BFFFE3"
+    android:gravity="bottom"
     android:orientation="vertical"
-    android:gravity="bottom" >
+    android:paddingTop="23dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RiDar"
+        android:layout_height="match_parent"
+        android:fontFamily="sans-serif-thin"
+        android:paddingRight="20dp"
+        android:text="ridar"
+        android:textAlignment="textEnd"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/white" />
+        android:textColor="@color/black"
+        android:textSize="60sp" />
 
 </LinearLayout>
