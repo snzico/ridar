@@ -30,9 +30,12 @@ public class Ac02Fr05SearchResults extends Fragment {
         // Required empty public constructor
     }
 
-    public static Ac02Fr05SearchResults newInstance(String param1, String param2) {
+    public static Ac02Fr05SearchResults newInstance() {
         Ac02Fr05SearchResults fragment = new Ac02Fr05SearchResults();
         /*
+        passed parameters:
+        String param1, String param2
+
         args from parameters passed in class definition
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
@@ -45,12 +48,10 @@ public class Ac02Fr05SearchResults extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            /*
+        /*if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-            */
-        }
+        } */
     }
 
     @Override

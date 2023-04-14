@@ -94,6 +94,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -136,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void selectDrawerItem (MenuItem item) {
         Fragment currentFragment = null;
+        FragmentManager fragmentManager = getSupportFragmentManager();
         Class fragmentClass;
         /*
         TODO
@@ -143,9 +145,35 @@ public class MainActivity extends AppCompatActivity {
         navigate to the selected fragment
          */
         switch (item.getItemId()) {
-            case R.id.search_fragment:
+            case R.id.submit_fragment:
+                fragmentClass = Ac02Fr03CreateSubmission.class;
                 break;
+            case R.id.history_fragment:
+                fragmentClass = Ac02Fr04SubmissionHistory.class;
+                break;
+            case R.id.share_app_fragment:
+                fragmentClass = Ac02Fr08ShareApp.class;
+                break;
+            case R.id.donate_fragment:
+                fragmentClass = Ac02Fr09Donate.class;
+                break;
+            case R.id.faq_fragment:
+                fragmentClass = Ac02Fr10FAQ.class;
+                break;
+            case R.id.contact_fragment:
+                fragmentClass = Ac02Fr12Contact.class;
+                break;
+            default:
+                fragmentClass = Ac02Fr02Search.class;
         }
+
+        try {
+            currentFragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        fragmentManager.beginTransaction().replace(R.id.content_layout, currentFragment).commit();
     }
 
     @Override

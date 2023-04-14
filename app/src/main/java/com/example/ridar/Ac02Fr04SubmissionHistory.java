@@ -29,9 +29,12 @@ public class Ac02Fr04SubmissionHistory extends Fragment {
         // Required empty public constructor
     }
 
-    public static Ac02Fr04SubmissionHistory newInstance(String param1, String param2) {
+    public static Ac02Fr04SubmissionHistory newInstance() {
         Ac02Fr04SubmissionHistory fragment = new Ac02Fr04SubmissionHistory();
         /*
+        passed parameters:
+        String param1, String param2
+
         args from parameters passed in class definition
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
@@ -44,12 +47,10 @@ public class Ac02Fr04SubmissionHistory extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            /*
+        /*if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
-            */
-        }
+        } */
     }
 
     @Override

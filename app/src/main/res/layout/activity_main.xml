@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -17,6 +18,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+            <RelativeLayout
+                android:id="@+id/content_layout"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -24,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/main_menu" />
+        app:menu="@menu/main_menu"
+        app:headerLayout="@layout/navigation_drawer_header"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
