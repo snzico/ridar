@@ -1,9 +1,7 @@
 package com.example.ridar;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
@@ -16,6 +14,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
+// fragment 01.02
+// Register
 /*
 fragment 01.02:
 Register
@@ -28,56 +28,37 @@ CheckBox [TSACheckBox]
 Button [SignUpButton (to Ac01Fr01Login ["Please verify account." TextView added]), SignInButton (to Ac01Fr01Login),
  */
 
+/* TODO
+ *   - review and correct naming according to convention
+ *   - review and correct unhelpful names
+ *   - update fragment index above
+ *   - fix findViewById null pointer exception
+ */
+
 public class Ac01Fr02Register extends Fragment {
-    /*
-    default params passed to fragment
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
-    */
-
     Boolean TSAAcceptedBoolean;
     TextView RegisterTextView;
     EditText FirstNameEditText, LastNameEditText, EmailAddressEditText, PhoneNumberEditText, PasswordEditText, ConfirmPasswordEditText;
     DatePicker BirthdayDatePicker;
     CheckBox TSACheckBox;
     Button SignUpButton, SignInButton;
+
     public Ac01Fr02Register() {
-        // Required empty public constructor
     }
 
     public static Ac01Fr02Register newInstance() {
         Ac01Fr02Register fragment = new Ac01Fr02Register();
-        /*
-        passed parameters:
-        String param1, String param2
-
-        args from parameters passed in class definition
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        */
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        } */
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        /*
-        component declarations
-         */
         RegisterTextView = getView().findViewById(R.id.RegisterTextView);
         FirstNameEditText = getView().findViewById(R.id.FirstNameEditText);
         LastNameEditText = getView().findViewById(R.id.LastNameEditText);
@@ -90,9 +71,7 @@ public class Ac01Fr02Register extends Fragment {
         TSACheckBox = getView().findViewById(R.id.TSACheckBox);
         SignUpButton = getView().findViewById(R.id.SignUpButton);
         SignInButton = getView().findViewById(R.id.RelativeLayout);
-        /*
-        component methods
-         */
+
         FirstNameEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -170,7 +149,7 @@ public class Ac01Fr02Register extends Fragment {
             Navigate back to Ac01Fr01Login fragment
             */
         });
-        // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_ac01_fr02_register, container, false);
     }
 }

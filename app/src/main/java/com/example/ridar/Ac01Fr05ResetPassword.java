@@ -1,9 +1,7 @@
 package com.example.ridar;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -13,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+// fragment 01.05
+// Reset Password
 /*
 fragment 01.05:
 ResetPassword
@@ -21,61 +21,42 @@ EditText [NewPasswordEditText, ConfirmNewPasswordEditText]
 Button [ConfirmNewPasswordButton (to Ac01Fr01Login ["Password successfully reset. Please login." TextView added]), BackButton (to Ac01Fr03ForgotPassword)]
  */
 
+/* TODO
+ *   - review and correct naming according to convention
+ *   - review and correct unhelpful names
+ *   - update fragment index above
+ *   - fix findViewById null pointer exception
+ *   - ensure correct verification code was entered
+ *      - possibly utilize a token system of some sort
+ */
+
 public class Ac01Fr05ResetPassword extends Fragment {
-    /*
-    default params passed to fragment
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
-    */
-
     TextView ResetPasswordTextView;
     EditText NewPasswordEditText, ConfirmNewPasswordEditText;
     Button ConfirmNewPasswordButton, BackButton;
+
     public Ac01Fr05ResetPassword() {
-        // Required empty public constructor
     }
 
     public static Ac01Fr05ResetPassword newInstance() {
         Ac01Fr05ResetPassword fragment = new Ac01Fr05ResetPassword();
-        /*
-        passed parameters:
-        String param1, String param2
-
-        args from parameters passed in class definition
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        */
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        } */
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        /*
-        component declarations
-        */
         ResetPasswordTextView = getView().findViewById(R.id.ResetPasswordTextView);
         NewPasswordEditText = getView().findViewById(R.id.NewPasswordEditText);
         ConfirmNewPasswordEditText = getView().findViewById(R.id.ConfirmNewPasswordEditText);
         ConfirmNewPasswordButton = getView().findViewById(R.id.ConfirmNewPasswordButton);
         BackButton = getView().findViewById(R.id.BackButton);
-        /*
-        component methods
-        */
+
         NewPasswordEditText.addTextChangedListener(new TextWatcher() {
             /* ^ repeated code from Ac01Fr02Register -> create separate method for reuse ^ */
             @Override
@@ -102,7 +83,7 @@ public class Ac01Fr05ResetPassword extends Fragment {
                 // Confirm NewPasswordEditText and ConfirmNewPasswordEditText match exactly
             }
         });
-        // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_ac01_fr05_reset_password, container, false);
     }
 }

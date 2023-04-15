@@ -1,4 +1,9 @@
 package com.example.ridar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+// Activity 01 Login
 /*
 Activity 01
 Login
@@ -42,10 +47,6 @@ TextView ["Enter new password:"]
 EditText [NewPasswordEditText, ConfirmPasswordEditText]
 Button [ConfirmButton (to Ac01Fr01Login ["Password successfully reset. Please login." TextView added]), BackButton (to Ac01Fr03ForgotPassword)]
 */
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 
 public class LoginActivity extends AppCompatActivity {
 

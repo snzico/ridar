@@ -1,5 +1,18 @@
 package com.example.ridar;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toolbar;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.navigation.NavigationView;
+
+// Activity 02 Main
 /*
 Activity 02
 MainActivity
@@ -88,20 +101,6 @@ EditText [NameEditText, EmailEditText, PhoneNumberEditText, ConcernEditText]
 CheckBox [ContestReviewCheckBox]
 Button [SubmitButton (to Ac01Fr01Home)]
  */
-
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toolbar;
-
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private MaterialToolbar mainToolbar;
