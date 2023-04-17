@@ -5,90 +5,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="12sp"
     tools:context=".Ac02Fr03CreateSubmission">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/create_submission_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Create a New Submission" />
 
-    <EditText
-        android:id="@+id/editTextText"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+            <TextView
+                android:id="@+id/create_submission_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create a New Submission" />
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/customer_address_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Customer Address" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
+            <EditText
+                android:id="@+id/customer_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="Customer Name" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
+            <EditText
+                android:id="@+id/review_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="147dp"
+                android:ems="10"
+                android:inputType="text|textMultiLine"
+                android:text="Review" />
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:stepSize="1" />
 
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
+            <CheckBox
+                android:id="@+id/no_tip_check_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Tip" />
 
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CheckBox" />
+            <CheckBox
+                android:id="@+id/low_tip_check_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Low Tip" />
 
-    <TextView
-        android:id="@+id/image_chooser_uri_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Selected image" />
+            <CheckBox
+                android:id="@+id/rude_to_driver_check_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rude to Driver" />
 
-    <ImageView
-        android:id="@+id/selected_image_image_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:src="@tools:sample/avatars" />
+            <CheckBox
+                android:id="@+id/fraudulent_cancellation_check_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fraudlent Cancellation" />
 
-    <Button
-        android:id="@+id/image_chooser_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Upload Image" />
+            <CheckBox
+                android:id="@+id/unfair_review_check_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unfair Review" />
+
+            <CheckBox
+                android:id="@+id/poor_communication_check_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Poor Communication Affected Driver" />
+
+            <TextView
+                android:id="@+id/image_chooser_uri_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selected image" />
+
+            <ImageView
+                android:id="@+id/selected_image_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="85sp"
+                tools:src="@tools:sample/avatars" />
+
+            <Button
+                android:id="@+id/image_chooser_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Image" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
