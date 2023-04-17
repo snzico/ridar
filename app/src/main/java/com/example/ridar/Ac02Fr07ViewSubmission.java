@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 // fragment 02.07
 // View Submission Details
 /*
+
+NOTE: This is the view/container of a single submission. It is the view/container that will display submissions wherever submissions are present is ui.
+
     TextView [CustomerNameTextView, CustomerAddressTextView, ReviewTextView, StarRatingTextView, CommonIssuesTextView]
     Button [BackButton (to Ac02Fr05SearchResults)]
 */

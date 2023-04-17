@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12sp"
     tools:context=".Ac02Fr08ShareApp">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/share_app_text_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Share App" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/app_android_link_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share for Android [insert playstore link]" />
+
+    <Button
+        android:id="@+id/copy_android_link_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copy Link" />
+
+    <TextView
+        android:id="@+id/app_ios_link_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share for iOS [insert App Store link]" />
+
+    <Button
+        android:id="@+id/copy_ios_link_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copy Link" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+</LinearLayout>

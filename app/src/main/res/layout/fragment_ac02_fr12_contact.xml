@@ -1,14 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12sp"
     tools:context=".Ac02Fr12Contact">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/contact_textview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="33dp"
         android:text="Contact" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/name_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/email_address_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text|textEmailAddress"
+        android:text="Email Address" />
+
+    <EditText
+        android:id="@+id/phone_number_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="Phone Number" />
+
+    <EditText
+        android:id="@+id/concern_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="Let us know how we can help!"
+        android:inputType="text|textMultiLine"
+        android:textAlignment="gravity" />
+
+    <CheckBox
+        android:id="@+id/contest_review_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I am contesting a review about me or someone else." />
+
+    <CheckBox
+        android:id="@+id/accept_terms_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I have read and accept the Terms of Service Agreement" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+</LinearLayout>

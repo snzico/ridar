@@ -10,7 +10,8 @@ import android.view.ViewGroup;
 // FAQ Submit a Question
 /*
     TextView [ThankYouForQuestionTextView]
-    Button [BackButton (to Ac02Fr10FAQ), HomeButton (to Ac02Fr01Home)]
+    EditText [NameEditText, EmailAddressEditText, QuestionEditText]
+    Button [BackButton (to Ac02Fr10FAQ), SubmitButton (to Ac02Fr01Home)]
 */
 
 /* TODO

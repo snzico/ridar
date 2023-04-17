@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12sp"
     tools:context=".Ac02Fr10FAQ">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/faq_text_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="FAQ" />
+        android:layout_height="wrap_content"
+        android:text="- FAQ -" />
 
-</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/faq_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/submit_question_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit a Question" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+</LinearLayout>

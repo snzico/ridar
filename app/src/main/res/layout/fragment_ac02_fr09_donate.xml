@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12sp"
     tools:context=".Ac02Fr09Donate">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/donate_text_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Donate" />
+        android:layout_height="wrap_content"
+        android:text="Donate to RiDar" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/donation_explanation_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RiDar runs on user donations. Here's why we ask for doantions and what we do with them:" />
+
+    <Button
+        android:id="@+id/patreon_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patreon" />
+
+    <Button
+        android:id="@+id/go_fund_me_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GoFundMe" />
+
+    <Button
+        android:id="@+id/cashapp_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CashApp" />
+
+    <Button
+        android:id="@+id/paypal_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PayPal" />
+
+    <Button
+        android:id="@+id/kick_starter_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kick Starter" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+</LinearLayout>

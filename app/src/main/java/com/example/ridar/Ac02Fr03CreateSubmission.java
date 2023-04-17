@@ -1,10 +1,21 @@
 package com.example.ridar;
 
+import static android.app.Activity.RESULT_OK;
+
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.net.Uri;
 
 // fragment 02.03
 // CreateSubmission
@@ -31,6 +42,10 @@ import android.view.ViewGroup;
  */
 
 public class Ac02Fr03CreateSubmission extends Fragment {
+    Button browseFilesButton;
+    TextView selectedImageTextView;
+    ImageView selectedImageImageView;
+    int SELECT_IMAGE = 200;
 
     public Ac02Fr03CreateSubmission() {
     }
@@ -48,6 +63,40 @@ public class Ac02Fr03CreateSubmission extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_ac02_fr03_create_submission, container, false);
+        View view = inflater.inflate(R.layout.fragment_ac02_fr03_create_submission, container, false);
+        browseFilesButton = view.findViewById(R.id.image_chooser_button);
+        selectedImageTextView = view.findViewById(R.id.image_chooser_uri_text_view);
+        selectedImageImageView = view.findViewById(R.id.selected_image_image_view);
+        Log.d("Image Chooser - ", "Button clicked beta.\n\n");
+
+        browseFilesButton.setOnClickListener(view1 -> {
+            Log.d("Image Chooser - ", "Button clicked 0.\n\n");
+            imageChooser();
+        });
+
+        return view;
     }
+
+    public void imageChooser () {
+        Log.d("Image Chooser - ", "Button clicked 1.\n\n");
+        Intent intent = new Intent ();
+        intent.setType("image/* video/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        Log.d("Image Chooser - ", "Button clicked 2.\n\n");
+
+        startActivityForResult(Intent.createChooser(intent, "Select Image"), SELECT_IMAGE);
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if (resultCode == RESULT_OK) {
+            if (requestCode == SELECT_IMAGE) {
+                Uri selectedImageUri = intent.getData();
+                if (selectedImageUri != null) {
+                    selectedImageImageView.setImageURI(selectedImageUri);
+                }
+            }
+        }
+    }
+
 }

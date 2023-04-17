@@ -1,14 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Ac02Fr03CreateSubmission">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/create_submission_text_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Submit" />
+        android:layout_height="wrap_content"
+        android:text="Create a New Submission" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CheckBox" />
+
+    <TextView
+        android:id="@+id/image_chooser_uri_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selected image" />
+
+    <ImageView
+        android:id="@+id/selected_image_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/image_chooser_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Image" />
+
+</LinearLayout>

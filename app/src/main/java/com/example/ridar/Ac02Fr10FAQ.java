@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 // FAQ
 /*
     RecyclerView [FAQRecyclerView]
-    EditText [UserQuestionEditText]
     Button [SubmitQuestionButton (to Ac02Fr11FAQSubmission), BackButton (to Ac02Fr01Home)]
 */
 

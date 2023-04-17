@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12sp"
     tools:context=".Ac02Fr07ViewSubmission">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Submission" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/view_submission_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submission [insert Customer Name and Address]" />
+
+    <TextView
+        android:id="@+id/customer_name_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[insert Customer Name]" />
+
+    <TextView
+        android:id="@+id/customer_address_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[insert Customer Address]" />
+
+    <TextView
+        android:id="@+id/review_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[insert User Submitted Review]" />
+
+    <TextView
+        android:id="@+id/star_rating_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[insert Star Rating]" />
+
+    <TextView
+        android:id="@+id/common_issues_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[insert Relevant Common Issues]" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+</LinearLayout>

@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 /*
     TextView [CompanyNameTextView, CompanyEmailTextView]
     EditText [NameEditText, EmailEditText, PhoneNumberEditText, ConcernEditText]
-    CheckBox [ContestReviewCheckBox]
+    CheckBox [ContestReviewCheckBox, AcceptTermsCheckbox]
     Button [SubmitButton (to Ac01Fr01Home)]
 */
 
